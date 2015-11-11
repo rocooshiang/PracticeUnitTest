@@ -17,6 +17,7 @@
 		F20B6EB71AC5C55B0094A1FE /* PeopleListDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20B6EB61AC5C55B0094A1FE /* PeopleListDataProvider.swift */; };
 		F20B6EB91AC5C5800094A1FE /* PeopleListDataProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20B6EB81AC5C5800094A1FE /* PeopleListDataProviderProtocol.swift */; };
 		F20B6EBB1AC5C6370094A1FE /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20B6EBA1AC5C6370094A1FE /* Person.swift */; };
+		F2B7DB641BF2EA69004AEBB2 /* PeopleListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B7DB631BF2EA69004AEBB2 /* PeopleListViewControllerTests.swift */; settings = {ASSET_TAGS = (); }; };
 		F2EFF80A1AC6AECF00C67FBB /* APICommunicatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2EFF8091AC6AECF00C67FBB /* APICommunicatorProtocol.swift */; };
 		F2EFF80C1AC6AEF000C67FBB /* PersonInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2EFF80B1AC6AEF000C67FBB /* PersonInfo.swift */; };
 		F2EFF80F1AC6AF3200C67FBB /* APICommunicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2EFF80E1AC6AF3200C67FBB /* APICommunicator.swift */; };
@@ -47,6 +48,7 @@
 		F20B6EB61AC5C55B0094A1FE /* PeopleListDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleListDataProvider.swift; sourceTree = "<group>"; };
 		F20B6EB81AC5C5800094A1FE /* PeopleListDataProviderProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleListDataProviderProtocol.swift; sourceTree = "<group>"; };
 		F20B6EBA1AC5C6370094A1FE /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		F2B7DB631BF2EA69004AEBB2 /* PeopleListViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleListViewControllerTests.swift; sourceTree = "<group>"; };
 		F2EFF8091AC6AECF00C67FBB /* APICommunicatorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APICommunicatorProtocol.swift; sourceTree = "<group>"; };
 		F2EFF80B1AC6AEF000C67FBB /* PersonInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonInfo.swift; sourceTree = "<group>"; };
 		F2EFF80E1AC6AF3200C67FBB /* APICommunicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APICommunicator.swift; sourceTree = "<group>"; };
@@ -95,11 +97,11 @@
 				F24062131AC5C88B00EBD078 /* PeopleList */,
 				F20B6E981AC5C3D70094A1FE /* DetailViewController.swift */,
 				F2EFF8101AC6AF3800C67FBB /* APICommunicator */,
+				F2EFF80D1AC6AEF700C67FBB /* Model */,
 				F20B6E9A1AC5C3D70094A1FE /* Main.storyboard */,
 				F20B6E9D1AC5C3D70094A1FE /* Images.xcassets */,
 				F20B6E9F1AC5C3D70094A1FE /* LaunchScreen.xib */,
 				F20B6E931AC5C3D70094A1FE /* Birthdays.xcdatamodeld */,
-				F2EFF80D1AC6AEF700C67FBB /* Model */,
 				F20B6E8F1AC5C3D70094A1FE /* Supporting Files */,
 			);
 			path = Birthdays;
@@ -117,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				F20B6EAA1AC5C3D70094A1FE /* Supporting Files */,
+				F2B7DB631BF2EA69004AEBB2 /* PeopleListViewControllerTests.swift */,
 			);
 			path = BirthdaysTests;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2B7DB641BF2EA69004AEBB2 /* PeopleListViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,7 +394,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEFINES_MODULE = NO;
+				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = Birthdays/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -401,7 +405,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEFINES_MODULE = NO;
+				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = Birthdays/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -412,6 +416,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -423,6 +428,8 @@
 				INFOPLIST_FILE = BirthdaysTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Birthdays.app/Birthdays";
 			};
 			name = Debug;
@@ -431,6 +438,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -438,6 +446,7 @@
 				INFOPLIST_FILE = BirthdaysTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Birthdays.app/Birthdays";
 			};
 			name = Release;
